@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Заявки</title>
+    <!-- Используем тот же файл стилей, чтобы дизайн был одинаковым -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+
+    <!-- Шапка (меню) -->
+    <header class="navbar">
+        <ul id="main_nav">
+            <li><a href="#">Название компании</a></li>
+            <li><a href="page1.html">Персонал</a></li>
+            <!-- Теперь класс active здесь, так как мы на странице Заявок -->
+            <li class="active"><a href="page2.html">Заявки</a></li>
+            <li><a href="#">Уведомления</a></li>
+            <li><a href="#">Роль</a></li>
+        </ul>
+    </header>
+
+    <main class="container">
+        <!-- Панель инструментов -->
+        <div class="toolbar">
+            <button class="btn-filter">фильтр по статусу</button>
+            <button class="btn-action">создать заявку</button>
+        </div>
+
+        <!-- Сетка карточек для заявок -->
+        <div class="card-grid"> 
+            <!-- Карточка заявки 1 -->
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                    <p>название услуги</p>
+                    <p>статус</p>
+                    <p>адрес</p>
+                    <p>дата начала - конца</p>
+                </div>
+            </div>
+            <!-- Карточка заявки 2 -->
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                    <p>название услуги</p>
+                    <p>статус</p>
+                    <p>адрес</p>
+                    <p>дата начала - конца</p>
+                </div>
+            </div>
+
+            <!-- Карточка заявки 3 -->
+            <div class="card">
+                <div class="card-image"></div>
+                <div class="card-info">
+                    <p>название услуги</p>
+                    <p>статус</p>
+                    <p>адрес</p>
+                    <p>дата начала - конца</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>
+
