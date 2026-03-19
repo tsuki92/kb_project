@@ -6,29 +6,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="navbar">
-        <ul id="main_nav">
-            <li><a href="index.html">Главная</a></li>
-            <li class="active"><a href="page1.html">Персонал</a></li>
-            <li><a href="page2.html">Заявки</a></li>
-            <li class="dropdown">
-                <a class="dropbtn">Роль ▼</a>
-                <div class="dropdown-content">
-                    <a href="#" onclick="handleLogin('HR-менеджер')">HR-менеджер</a>
-                    <a href="#" onclick="handleLogin('Управляющий офисом')">Управляющий офисом</a>
-                    <a href="#" onclick="handleLogin('Управляющий магазином')">Управляющий магазином</a>
-                </div>
-            </li>
-        </ul>
-    </header>
-    <main class="container">
-        <div class="toolbar">
-            <button class="btn-filter">Фильтр по статусу</button>
-        </div>
-        <div class="card-grid" id="staff-container">
-         
-        </div>
-    </main>
-    <script src="scripts.js"></script>
+<header class="navbar">
+    <ul id="main_nav">
+        <li><a href="index.html">Главная</a></li>
+        <li class="active"><a href="page1.html">Персонал</a></li>
+        <li><a href="page2.html">Заявки</a></li>
+        <li class="dropdown"><a class="dropbtn">Роль ▼</a><div class="dropdown-content">
+            <a href="#" onclick="handleLogin('HR-менеджер')">HR</a><a href="#" onclick="handleLogin('Управляющий офисом')">Офис</a><a href="#" onclick="handleLogin('Управляющий магазином')">Магазин</a>
+        </div></li>
+    </ul>
+</header>
+<main class="container">
+    <div style="display:flex; justify-content: space-between;">
+        <h1>Персонал</h1>
+        <button class="btn-filter" onclick="toggleFilter()">Фильтр по статусу</button>
+    </div>
+    <div class="card-grid" id="staff-container"></div>
+</main>
+<script src="scripts.js"></script>
 </body>
 </html>

@@ -2,33 +2,36 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная - TourManagement</title>
+    <title>TourManagement - Главная</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="navbar">
-        <ul id="main_nav">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="page1.html">Персонал</a></li>
-            <li><a href="page2.html">Заявки</a></li>
-            <li class="dropdown">
-                <a class="dropbtn">Роль ▼</a>
-                <div class="dropdown-content">
-                    <a href="#" onclick="handleLogin('HR-менеджер')">HR-менеджер</a>
-                    <a href="#" onclick="handleLogin('Управляющий офисом')">Управляющий офисом</a>
-                    <a href="#" onclick="handleLogin('Управляющий магазином')">Управляющий магазином</a>
-                </div>
-            </li>
-        </ul>
-    </header>
-    <main class="container">
-    <div id="login-form" style="max-width: 300px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc;">
-        <h2>Вход в систему</h2>
-        <input type="text" id="username" placeholder="Логин" style="width: 100%; margin-bottom: 10px; padding: 8px;">
-        <input type="password" id="password" placeholder="Пароль" style="width: 100%; margin-bottom: 15px; padding: 8px;">
-        <button onclick="realLogin()" style="width: 100%; background: #333; color: white; padding: 10px; border: none; cursor: pointer;">Войти</button>
+<header class="navbar">
+    <ul id="main_nav">
+        <li class="active"><a href="index.html">Главная</a></li>
+        <li><a href="page1.html">Персонал</a></li>
+        <li><a href="page2.html">Заявки</a></li>
+        <li class="dropdown">
+            <a class="dropbtn">Выбор роли ▼</a>
+            <div class="dropdown-content">
+                <a href="#" onclick="handleLogin('HR-менеджер')">HR-менеджер</a>
+                <a href="#" onclick="handleLogin('Управляющий офисом')">Управляющий офисом</a>
+                <a href="#" onclick="handleLogin('Управляющий магазином')">Управляющий магазином</a>
+            </div>
+        </li>
+    </ul>
+</header>
+<main class="container" style="text-align: center;">
+    <h1>TourManagement Pro 🚀</h1>
+    <p>Добро пожаловать. Пожалуйста, авторизуйтесь через меню выбора ролей.</p>
+    <div id="login-section" style="display:none; border-top: 1px solid #ddd; padding-top: 20px;">
+        <h3>Вход: <span id="display-role-name"></span></h3>
+        <input type="text" id="u-name" placeholder="Логин">
+        <input type="password" id="u-pass" placeholder="Пароль">
+        <br>
+        <button onclick="submitLogin()" class="btn-filter" style="margin-top:10px;">Войти</button>
     </div>
 </main>
-    <script src="scripts.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>

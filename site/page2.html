@@ -6,42 +6,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="navbar">
-        <ul id="main_nav">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="page1.html">Персонал</a></li>
-            <li class="active"><a href="page2.html">Заявки</a></li>
-            <li class="dropdown">
-                <a class="dropbtn">Роль ▼</a>
-                <div class="dropdown-content">
-                    <a href="#" onclick="handleLogin('HR-менеджер')">HR-менеджер</a>
-                    <a href="#" onclick="handleLogin('Управляющий офисом')">Управляющий офисом</a>
-                    <a href="#" onclick="handleLogin('Управляющий магазином')">Управляющий магазином</a>
-                </div>
-            </li>
-        </ul>
-    </header>
-    <main class="container">
-        <div class="toolbar">
-            <div id="add-request-form">
-                <h3>Создать новую заявку</h3>
-                <input type="text" id="req-title" placeholder="Название услуги">
-                <input type="text" id="req-address" placeholder="Адрес">
-                <input type="text" id="req-date" placeholder="Даты">
-                
-                <!-- ВЫБОР СОТРУДНИКА -->
-                <select id="req-staff" style="padding: 8px; margin-right: 10px;">
-                    <option value="">Выберите ответственного</option>
-                </select>
-                
-                <button onclick="submitRequest()" class="btn-action">Создать</button>
-            </div>
-        </div>
-
-        <div class="card-grid" id="requests-container">
-           
-        </div>
-    </main>
-    <script src="scripts.js"></script>
+<header class="navbar">
+    <ul id="main_nav">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="page1.html">Персонал</a></li>
+        <li class="active"><a href="page2.html">Заявки</a></li>
+        <li class="dropdown"><a class="dropbtn">Роль ▼</a><div class="dropdown-content">
+            <a href="#" onclick="handleLogin('HR-менеджер')">HR</a><a href="#" onclick="handleLogin('Управляющий офисом')">Офис</a><a href="#" onclick="handleLogin('Управляющий магазином')">Магазин</a>
+        </div></li>
+    </ul>
+</header>
+<main class="container">
+    <h1>Заявки</h1>
+    <div style="background:#f9f9f9; padding:15px; border-radius:8px;">
+        <h3>Новая заявка</h3>
+        <input type="text" id="req-title" placeholder="Название тура">
+        <input type="text" id="req-address" placeholder="Адрес">
+        <select id="req-staff"><option value="">Выбор гида</option></select>
+        <button onclick="submitRequest()" class="btn-filter">Создать</button>
+    </div>
+    <div class="card-grid" id="requests-container"></div>
+</main>
+<script src="scripts.js"></script>
 </body>
 </html>
