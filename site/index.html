@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html lang = ru>
-    <head>
-        <meta charset="utf-8" />
-        <title>Персонал</title>
-        <link rel="stylesheet" type="text/css" href="styles.css"/>
-    </head>
-    <body>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная - TourManagement</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
         <ul id="main_nav">
-            <li><a>Компания</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li><a href="page1.html">Персонал</a></li>
-            <li><a src href = "page2.html">Заявки</a></li>
-            <li><a href="#">Уведомления</a></li>
-            <li><a href="#">Роль</a>
-                <ul>
-                    <li><a href="#">HR-менеджер</a></li>
-                    <li><a href="#">Управляющий офисом</a></li>
-                    <li><a href="#">Управляющий магазином</a></li>
-                </ul>
+            <li><a href="page2.html">Заявки</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Роль ▼</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="handleLogin('HR-менеджер')">HR-менеджер</a>
+                    <a href="#" onclick="handleLogin('Управляющий офисом')">Управляющий офисом</a>
+                    <a href="#" onclick="handleLogin('Управляющий магазином')">Управляющий магазином</a>
+                </div>
             </li>
         </ul>
-
-    </body>
+    </header>
+    <main class="container">
+    <div id="login-form" style="max-width: 300px; margin: 50px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px #ccc;">
+        <h2>Вход в систему</h2>
+        <input type="text" id="username" placeholder="Логин" style="width: 100%; margin-bottom: 10px; padding: 8px;">
+        <input type="password" id="password" placeholder="Пароль" style="width: 100%; margin-bottom: 15px; padding: 8px;">
+        <button onclick="realLogin()" style="width: 100%; background: #333; color: white; padding: 10px; border: none; cursor: pointer;">Войти</button>
+    </div>
+</main>
+    <script src="scripts.js"></script>
+</body>
 </html>

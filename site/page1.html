@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8">
     <title>Персонал</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Верхняя навигация -->
     <header class="navbar">
         <ul id="main_nav">
-            <li><a href="#">Название компании</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li class="active"><a href="page1.html">Персонал</a></li>
             <li><a href="page2.html">Заявки</a></li>
-            <li><a href="#">Уведомления</a></li>
-            <li><a href="#">Роль</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Роль ▼</a>
+                <div class="dropdown-content">
+                    <a href="#" onclick="handleLogin('HR-менеджер')">HR-менеджер</a>
+                    <a href="#" onclick="handleLogin('Управляющий офисом')">Управляющий офисом</a>
+                    <a href="#" onclick="handleLogin('Управляющий магазином')">Управляющий магазином</a>
+                </div>
+            </li>
         </ul>
     </header>
-
     <main class="container">
-        <!-- Панель с кнопками -->
         <div class="toolbar">
-            <button class="btn-filter">фильтр по статусу</button>
-            <button class="btn-action">Назначить</button>
+            <button class="btn-filter">Фильтр по статусу</button>
         </div>
-
-        <!-- Сетка карточек -->
-        <div class="card-grid">
-            <!-- Карточка 1 -->
-            <div class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <p>ФИО</p>
-                    <p>Специализация</p>
-                    <p>Статус(занят/нет)</p>
-                </div>
-            </div>
-
-            <!-- Карточка 2 -->
-            <div class="card">
-                <div class="card-image"></div>
-                <div class="card-info">
-                    <p>ФИО</p>
-                    <p>Специализация</p>
-                    <p>Статус(занят/нет)</p>
-                </div>
-            </div>
+        <div class="card-grid" id="staff-container">
+         
         </div>
     </main>
-
+    <script src="scripts.js"></script>
 </body>
 </html>
